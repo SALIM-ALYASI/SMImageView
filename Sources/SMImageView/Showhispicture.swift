@@ -8,14 +8,14 @@
 
 import UIKit
 
-class Showhispicture: UIViewController {
+public class Showhispicture: UIViewController {
     var imageString = [String]()
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var btnCancel: UIButton!
     var lastIndexPathCitySelected = Int()
 
-  override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
     //  matrixarrangement()
     //-------------------------------------
@@ -25,7 +25,7 @@ class Showhispicture: UIViewController {
  */
      }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         imagesCollectionView.layoutIfNeeded()
         let indexPathrow = IndexPath(item:lastIndexPathCitySelected , section:0)
         imagesCollectionView.scrollToItem(at: indexPathrow , at: .top, animated: true)
@@ -43,11 +43,11 @@ class Showhispicture: UIViewController {
       
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
        imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
      }
 
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
      }
     
@@ -56,12 +56,12 @@ class Showhispicture: UIViewController {
 
 extension Showhispicture:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageString.count
      // return family.count
      }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
 //        imageString
        
@@ -69,11 +69,11 @@ extension Showhispicture:UICollectionViewDelegate, UICollectionViewDataSource  ,
        return cell
    }
     
-    func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+    public func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
       return 0
        }
     
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          return CGSize(width: imagesCollectionView.frame .width , height: self.imagesCollectionView.frame .height)
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

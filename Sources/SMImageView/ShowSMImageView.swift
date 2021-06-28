@@ -4,7 +4,7 @@
 import UIKit
 public struct ShowSMImageView {
     public init() {}
-     func alert(arry:[String],indexPath:Int)->Showhispicture{
+    public func alert(arry:[String],indexPath:Int)->Showhispicture{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyBoard.instantiateViewController(withIdentifier: "AlertVC") as! Showhispicture
         alertVC.imageString = arry
