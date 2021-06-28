@@ -2,8 +2,8 @@
 //    var text = "Hello, World!"
 //}
 import UIKit
-public struct Show {
-    public init() {}
+public class ShowSMImageView {
+    static let instance = ShowSMImageView()
      func alert(arry:[String],indexPath:Int)->Showhispicture{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyBoard.instantiateViewController(withIdentifier: "AlertVC") as! Showhispicture
