@@ -2,7 +2,7 @@
 //    var text = "Hello, World!"
 //}
 import UIKit
-public struct SMImageView {
+public struct Show {
     public init() {}
      func alert(arry:[String],indexPath:Int)->Showhispicture{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
