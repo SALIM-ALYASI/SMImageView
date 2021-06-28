@@ -9,7 +9,8 @@
 import UIKit
 
 class BekijkEenFoto{
-   func alert(arry:[String],indexPath:Int)->PictureDisplayService{
+    public init() {}
+    public func alert(arry:[String],indexPath:Int)->PictureDisplayService{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyBoard.instantiateViewController(withIdentifier: "AlertVC") as! PictureDisplayService
         alertVC.imageString = arry
