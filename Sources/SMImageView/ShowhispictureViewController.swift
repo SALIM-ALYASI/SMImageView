@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Showhispicture: UIViewController {
+public class ShowhispictureViewController: UIViewController {
     var imageString = [String]()
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
@@ -54,7 +54,7 @@ public class Showhispicture: UIViewController {
 
 }
 
-extension Showhispicture:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
+extension ShowhispictureViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageString.count
@@ -62,7 +62,7 @@ extension Showhispicture:UICollectionViewDelegate, UICollectionViewDataSource  ,
      }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "CellimagView", for: indexPath) as! CellimagView
 //        imageString
        
         cell.imagView.image = UIImage(named:imageString[indexPath.row])

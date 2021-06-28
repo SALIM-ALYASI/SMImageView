@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Showhispicture-->
+        <!--Showhispicture View Controller-->
         <scene sceneID="sM5-Ox-7wv">
             <objects>
-                <viewController storyboardIdentifier="AlertVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="CUO-rl-kpU" customClass="Showhispicture" customModule="SMImageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowhispictureViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="CUO-rl-kpU" customClass="ShowhispictureViewController" customModule="SMImageView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bW4-cv-h01">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="5hn-dI-aaY" customClass="Cell" customModule="SMImageView">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellimagView" id="5hn-dI-aaY" customClass="CellimagView" customModule="SMImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iz0-xk-CeF">
