@@ -1,14 +1,14 @@
 //
-//  PictureDisplayService.swift
-//  AL-BADYAH
+//  Showhispicture.swift
+//  
 //
-//  Created by ALYASI on 15/01/2021.
-//  Copyright © 2021 ALYASI. All rights reserved.
+//  Created by الياسي on 28/06/2021.
 //
+
 
 import UIKit
 
-class PictureDisplayService: UIViewController {
+class Showhispicture: UIViewController {
     var imageString = [String]()
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
@@ -54,7 +54,7 @@ class PictureDisplayService: UIViewController {
 
 }
 
-extension PictureDisplayService:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
+extension Showhispicture:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageString.count
@@ -62,7 +62,7 @@ extension PictureDisplayService:UICollectionViewDelegate, UICollectionViewDataSo
      }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "imagCell", for: indexPath) as! imagCell
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
 //        imageString
        
         cell.imagView.image = UIImage(named:imageString[indexPath.row])

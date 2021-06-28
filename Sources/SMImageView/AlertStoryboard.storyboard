@@ -1,110 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Picture Display Service-->
-        <scene sceneID="jtA-M2-6Kz">
+        <!--Showhispicture-->
+        <scene sceneID="sM5-Ox-7wv">
             <objects>
-                <viewController storyboardIdentifier="AlertVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="KoN-tY-fHd" customClass="PictureDisplayService" customModule="AL_BADYAH" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i20-OP-tGc">
+                <viewController storyboardIdentifier="AlertVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="CUO-rl-kpU" customClass="Showhispicture" customModule="SMImageView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bW4-cv-h01">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kXT-gd-TrM">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SFE-sP-jaE">
                                 <rect key="frame" x="0.0" y="75" width="414" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7z2-JD-hB9">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s5L-me-6th">
                                     <size key="itemSize" width="293" height="141"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imagCell" id="FkI-qT-GfJ" customClass="imagCell" customModule="AL_BADYAH" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="5hn-dI-aaY" customClass="Cell" customModule="SMImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M9v-Yo-zUP">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iz0-xk-CeF">
                                             <rect key="frame" x="0.0" y="0.0" width="293" height="141"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-PO-H3A">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="L62-ke-TES">
                                                     <rect key="frame" x="0.0" y="0.0" width="293" height="141"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="8xS-PO-H3A" firstAttribute="top" secondItem="M9v-Yo-zUP" secondAttribute="top" id="2gB-Tj-PzJ"/>
-                                                <constraint firstItem="8xS-PO-H3A" firstAttribute="leading" secondItem="M9v-Yo-zUP" secondAttribute="leading" id="LFI-ah-F1B"/>
-                                                <constraint firstAttribute="bottom" secondItem="8xS-PO-H3A" secondAttribute="bottom" id="i1l-rE-fsa"/>
-                                                <constraint firstAttribute="trailing" secondItem="8xS-PO-H3A" secondAttribute="trailing" id="wB5-XM-eDV"/>
+                                                <constraint firstAttribute="bottom" secondItem="L62-ke-TES" secondAttribute="bottom" id="GQm-jx-CUT"/>
+                                                <constraint firstItem="L62-ke-TES" firstAttribute="top" secondItem="Iz0-xk-CeF" secondAttribute="top" id="X67-lU-rOg"/>
+                                                <constraint firstItem="L62-ke-TES" firstAttribute="leading" secondItem="Iz0-xk-CeF" secondAttribute="leading" id="YBr-Wa-FVL"/>
+                                                <constraint firstAttribute="trailing" secondItem="L62-ke-TES" secondAttribute="trailing" id="gkr-mH-fc3"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="293" height="141"/>
                                         <connections>
-                                            <outlet property="imagView" destination="8xS-PO-H3A" id="Uqx-X5-dRD"/>
+                                            <outlet property="imagView" destination="L62-ke-TES" id="dK8-Eo-qSh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="KoN-tY-fHd" id="FdC-ec-aRw"/>
-                                    <outlet property="delegate" destination="KoN-tY-fHd" id="GJE-V7-KAy"/>
+                                    <outlet property="dataSource" destination="CUO-rl-kpU" id="box-kI-h6B"/>
+                                    <outlet property="delegate" destination="CUO-rl-kpU" id="6Rh-oq-DSK"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Li-cv-SjC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5Y-i1-kNy">
                                 <rect key="frame" x="10" y="20" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="uB2-CA-sxl"/>
-                                    <constraint firstAttribute="height" constant="45" id="yGW-J2-6EZ"/>
+                                    <constraint firstAttribute="height" constant="45" id="7pA-2j-TGs"/>
+                                    <constraint firstAttribute="width" constant="45" id="ueP-0y-psV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="ic_close"/>
                                 <connections>
-                                    <action selector="btnCancel:" destination="KoN-tY-fHd" eventType="touchUpInside" id="6x2-ei-O10"/>
+                                    <action selector="btnCancel:" destination="CUO-rl-kpU" eventType="touchUpInside" id="lg5-6J-JBw"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-V3-1kW">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-eG-wuj">
                                 <rect key="frame" x="10" y="858" width="394" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="RCS-oG-9vS"/>
+                                    <constraint firstAttribute="height" constant="28" id="JCv-7Y-YYO"/>
                                 </constraints>
                             </pageControl>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ePo-XU-BWy"/>
+                        <viewLayoutGuide key="safeArea" id="SPZ-FC-X22"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="vAW-V3-1kW" secondAttribute="bottom" constant="10" id="2ly-FL-3Ua"/>
-                            <constraint firstItem="vAW-V3-1kW" firstAttribute="leading" secondItem="ePo-XU-BWy" secondAttribute="leading" constant="10" id="9lK-aS-Z3S"/>
-                            <constraint firstItem="kXT-gd-TrM" firstAttribute="trailing" secondItem="ePo-XU-BWy" secondAttribute="trailing" id="BqO-Iu-AED"/>
-                            <constraint firstItem="vAW-V3-1kW" firstAttribute="top" secondItem="kXT-gd-TrM" secondAttribute="bottom" constant="15" id="IwQ-AV-KWr"/>
-                            <constraint firstItem="ePo-XU-BWy" firstAttribute="trailing" secondItem="vAW-V3-1kW" secondAttribute="trailing" constant="10" id="Tt7-x5-1km"/>
-                            <constraint firstItem="kXT-gd-TrM" firstAttribute="top" secondItem="8Li-cv-SjC" secondAttribute="bottom" constant="10" id="WQO-pJ-216"/>
-                            <constraint firstItem="kXT-gd-TrM" firstAttribute="leading" secondItem="ePo-XU-BWy" secondAttribute="leading" id="bQP-Y6-kf3"/>
-                            <constraint firstItem="8Li-cv-SjC" firstAttribute="top" secondItem="i20-OP-tGc" secondAttribute="top" constant="20" id="h2I-9J-ZOS"/>
-                            <constraint firstItem="8Li-cv-SjC" firstAttribute="leading" secondItem="i20-OP-tGc" secondAttribute="leading" constant="10" id="qgP-Eq-YRU"/>
+                            <constraint firstItem="tYM-eG-wuj" firstAttribute="leading" secondItem="SPZ-FC-X22" secondAttribute="leading" constant="10" id="7sT-0z-ALG"/>
+                            <constraint firstItem="SFE-sP-jaE" firstAttribute="top" secondItem="H5Y-i1-kNy" secondAttribute="bottom" constant="10" id="Io1-5X-o7x"/>
+                            <constraint firstItem="tYM-eG-wuj" firstAttribute="top" secondItem="SFE-sP-jaE" secondAttribute="bottom" constant="15" id="NGY-7W-2lF"/>
+                            <constraint firstItem="SPZ-FC-X22" firstAttribute="trailing" secondItem="tYM-eG-wuj" secondAttribute="trailing" constant="10" id="e2c-qO-FTP"/>
+                            <constraint firstItem="SFE-sP-jaE" firstAttribute="leading" secondItem="SPZ-FC-X22" secondAttribute="leading" id="fcg-Un-O2Q"/>
+                            <constraint firstItem="H5Y-i1-kNy" firstAttribute="leading" secondItem="bW4-cv-h01" secondAttribute="leading" constant="10" id="haB-vx-vI8"/>
+                            <constraint firstAttribute="bottom" secondItem="tYM-eG-wuj" secondAttribute="bottom" constant="10" id="kdM-FI-DVt"/>
+                            <constraint firstItem="SFE-sP-jaE" firstAttribute="trailing" secondItem="SPZ-FC-X22" secondAttribute="trailing" id="qf5-Wk-xRe"/>
+                            <constraint firstItem="H5Y-i1-kNy" firstAttribute="top" secondItem="bW4-cv-h01" secondAttribute="top" constant="20" id="zYB-Vu-s8x"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Kd1-ws-J4V" appends="YES" id="Dbe-f6-5WV"/>
+                            <outletCollection property="gestureRecognizers" destination="zQj-mb-b5m" appends="YES" id="B8b-wx-D8h"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="btnCancel" destination="8Li-cv-SjC" id="Amc-OH-8T6"/>
-                        <outlet property="imagViewPageControl" destination="vAW-V3-1kW" id="sOP-Xw-85a"/>
-                        <outlet property="imagesCollectionView" destination="kXT-gd-TrM" id="AK2-e7-7C8"/>
+                        <outlet property="btnCancel" destination="H5Y-i1-kNy" id="fhZ-Yy-Lyy"/>
+                        <outlet property="imagViewPageControl" destination="tYM-eG-wuj" id="DRc-W2-wxP"/>
+                        <outlet property="imagesCollectionView" destination="SFE-sP-jaE" id="0mx-uv-vXL"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="47c-4x-uR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Kd1-ws-J4V">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TaH-kK-iXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="zQj-mb-b5m">
                     <connections>
-                        <action selector="panGestureRecognizer:" destination="KoN-tY-fHd" id="4XE-Uu-cUc"/>
+                        <action selector="panGestureRecognizer:" destination="CUO-rl-kpU" id="2Mg-fa-YfV"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
