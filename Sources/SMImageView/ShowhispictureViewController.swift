@@ -9,11 +9,11 @@
 import UIKit
 
 public class ShowhispictureViewController: UIViewController {
-    var imageString = [String]()
+    public var imageString = [String]()
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var btnCancel: UIButton!
-    var lastIndexPathCitySelected = Int()
+    public var lastIndexPathCitySelected = Int()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
