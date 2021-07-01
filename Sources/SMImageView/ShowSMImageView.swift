@@ -2,17 +2,11 @@ struct SMImageView {
     var text = "Hello, World!"
 }
 import UIKit
-public struct ShowSMImageView {
-    public init() {}
-    public func alert(arry:[String],indexPath:Int)->ShowhispictureViewController{
-        let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
-        let alertVC = storyBoard.instantiateViewController(withIdentifier: "ShowhispictureViewController") as! ShowhispictureViewController
-        alertVC.imageString = arry
-        alertVC.lastIndexPathCitySelected = indexPath
+public class Hello: UIViewController {
+   public override func viewDidLoad() {
+        super.viewDidLoad()
        
-     
-        return alertVC
+        view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        
     }
-    
 }
- 
