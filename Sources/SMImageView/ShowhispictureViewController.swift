@@ -25,12 +25,12 @@ public class ShowhispictureViewController: UIViewController {
  */
      }
     
-//    public override func viewWillAppear(_ animated: Bool) {
-//        imagesCollectionView.layoutIfNeeded()
-//        let indexPathrow = IndexPath(item:lastIndexPathCitySelected , section:0)
-//        imagesCollectionView.scrollToItem(at: indexPathrow , at: .top, animated: true)
-//        imagViewPageControl.numberOfPages = imageString.count
-//    }
+    public override func viewWillAppear(_ animated: Bool) {
+        imagesCollectionView.layoutIfNeeded()
+        let indexPathrow = IndexPath(item:lastIndexPathCitySelected , section:0)
+        imagesCollectionView.scrollToItem(at: indexPathrow , at: .top, animated: true)
+        imagViewPageControl.numberOfPages = imageString.count
+    }
     
   
     @IBAction func panGestureRecognizer(_ sender: UIPanGestureRecognizer) {
