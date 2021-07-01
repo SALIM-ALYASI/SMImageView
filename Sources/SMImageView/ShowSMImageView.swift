@@ -3,7 +3,7 @@ struct SMImageView {
 }
 import UIKit
 public class Hello: UIViewController {
-    var World = 0
+    public var World = 0
     
    public override func viewDidLoad() {
         super.viewDidLoad()
