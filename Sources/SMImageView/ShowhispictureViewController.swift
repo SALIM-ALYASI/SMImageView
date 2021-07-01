@@ -7,13 +7,14 @@
 
 
 import UIKit
-
+public var lastIndexPathCitySelected = Int()
+public var imageString = [String]()
 public class ShowhispictureViewController: UIViewController {
-    public var imageString = [String]()
+ 
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var btnCancel: UIButton!
-    public var lastIndexPathCitySelected = Int()
+    //public var lastIndexPathCitySelected = Int()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
